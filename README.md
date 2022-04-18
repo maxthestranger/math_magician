@@ -40,7 +40,7 @@ npm run test
 
 ## Authors
 
-👤 **Author1**
+👤 **Max The Stranger**
 
 - GitHub: [@maxthestranger](https://github.com/maxthestranger)
 - Twitter: [@maxthestranger](https://twitter.com/maxthestranger)
