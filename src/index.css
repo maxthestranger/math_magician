@@ -1,27 +1,86 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* variables */
+:root {
+  --radius: 13;
+  --grey: #858694;
+  --white: #fff;
+  --primary: #f5913e;
+  --secondary: #e0e0e0;
+  --border: 2px solid #d1d1d1;
+  --trans: all 0.1s ease-in;
+  --font: 'Righteous', cursive;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+/* resets */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--font);
+}
+
+.calculator {
+  max-width: 60%;
+  margin: 0 auto;
+  background: antiquewhite;
+  border-radius: var(--radius);
+}
+
+.calculator-screen {
+  width: 100%;
+  font-size: 60px;
+  background: var(--grey);
+  padding: 20px 12px;
+  color: var(--white);
+  text-align: right;
+  border: none;
+  font-family: var(--font);
+}
+
+.calculator-keys {
+  width: 100%;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  background: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+  padding: 40px 0;
+  cursor: pointer;
+  transition: var(--trans);
+  font-size: 25px;
+  font-family: var(--font);
+}
+
+.btn:hover {
+  background: #d5d4d4;
+}
+
+.btn.primary {
+  background: var(--primary);
+}
+
+.btn.primary:hover {
+  background: #e6873a;
+}
+
+.btn.zero {
+  grid-area: 5/1/5/3;
 }
