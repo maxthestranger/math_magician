@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Button from './Button';
 
-export default function Calculator() {
+export default function Calc() {
   const [calcObj, setCalcObj] = useState({
     total: null,
     next: null,
