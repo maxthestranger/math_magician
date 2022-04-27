@@ -9,28 +9,110 @@
   --secondary: #e0e0e0;
   --border: 2px solid #d1d1d1;
   --trans: all 0.1s ease-in;
+  --dark: #091a40;
+  --trans: all 0.2s ease-in-out;
   --font: 'Righteous', cursive;
 }
 
 /* resets */
-html {
-  font-size: 62.5%;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
+/* general */
 body {
   line-height: 1.5;
+  font-size: 16px;
+  font-weight: normal;
   font-family: var(--font);
+  color: var(--dark);
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: var(--trans);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* header */
+
+.header {
+  padding: 0 1.6rem;
+  border: var(--border);
+  border-radius: var(--radius);
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.header .nav_bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nav_bar .nav_brand:hover {
+  color: var(--dark);
+}
+
+.header .nav_bar .nav_items {
+  display: flex;
+  list-style: none;
+  position: relative;
+}
+
+.header .nav_bar .nav_items li:not(:first-child)::after {
+  content: '';
+  width: 2px;
+  background: var(--dark);
+  height: 50%;
+  position: absolute;
+  top: 25%;
+}
+
+.header .nav_bar .nav_items li a {
+  padding: 1rem 1rem;
+  display: block;
+  position: relative;
+}
+
+/* grid */
+.display_sec {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 5%;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* home */
+p {
+  margin-bottom: 10px;
+}
+
+/* calculator */
 .calculator {
   max-width: 60%;
   margin: 0 auto;
