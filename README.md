@@ -10,7 +10,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com) _available once deployed_
+[Live Netlify Demo](https://626a38899e960570cfb887a0--wonderful-bienenstitch-b99aa6.netlify.app/)
 
 ## Getting Started
 
